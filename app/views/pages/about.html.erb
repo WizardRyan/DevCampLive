@@ -1,0 +1,82 @@
+<div class="app-card-container">
+  <div class="card">
+    <h1>About Me</h1>
+    <hr>
+    
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "placehold.jpg", alt: "Profile Picture", class: 'profile-img' %>
+        <h2>Skills</h2> 
+        <hr>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+          <div class="skill">
+            <h4><%= skill.title %></h4>
+            <div class="progress">
+              <div 
+                class="progress-bar progress-bar-striped"
+                id="progress-bars"
+                role="progressbar"
+                aria-valuenow"<%= skill.percentUtilized %>"
+                aria-valuemax="100"
+                style="width: <%= skill.percentUtilized %>%"
+                >
+                <%= skill.percentUtilized %>%
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
+      
+      <div class="col-md-8" id="about-links">
+        <p>Welcome to my site, i'm a software developer with experience in Ruby on Rails and Windows applications written in C#. Head on over to <strong><%=link_to 'portfolios', portfolios_path %></strong> to see the applications I've worked on, or visit my <strong><a href="https://github.com/WizardRyan">GitHub</a></strong> to see what I've been up to.</p>
+        
+        <p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#jobs"
+            aria-expanded="false"
+            aria-controller"jobs"
+          >
+            More Info
+          </button>
+          
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controller"education"
+          >
+            Education
+          </button>
+          
+        </p>
+        
+        <p>
+          <div class="collapse" id="jobs">
+            <div class="card card-block">
+              C# - 1 year
+            </div>
+            <div class="card card-block">
+              Ruby on Rails - 3 months
+            </div>
+          </div>
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              High School Programming 1, 2, and Web Development (in progress)
+            </div>
+            <div class="card card-block">
+              MATC Web Development (in progress)
+            </div>
+          </div>          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,29 @@
+ <div class="col-sm-3 offset-sm-1 blog-sidebar">
+  <div class="sidebar-module sidebar-module-inset">
+    <h4>About</h4>
+    <p>I probably won't post much here, this is really just showing what this site can do. Look below to see where else you find me, or visit the <%= link_to 'contact me', contact_path %> page.</p>
+  </div>
+  
+   <%= source_helper("alert alert-info blog-sidebar-source") %>
+  
+  <div class="sidebar-module">
+    <h4>Topics</h4>
+   
+   
+    <% @side_bar_topics.each do |topic| %>
+      <p><%= link_to topic.title, topic_path(topic) %></p>
+      <% end %>
+      <p><%= side_top("Computer Science/Programming", 1)%></p>
+      <p><%= side_top("Thoughts", 2)%></p>
+
+  </div>
+  
+  <div class="sidebar-module">
+    <h4>Elsewhere</h4>
+    <ol class="list-unstyled social-links" >
+      <li><a href="https://github.com/WizardRyan"><%= fa_icon "github" %></a></li>
+      <li><a href="https://plus.google.com/+RyanAndersen117"><%= fa_icon "google-plus" %></a></li>
+      <li><a href="http://steamcommunity.com/profiles/76561198274518846/"><%= fa_icon "steam" %></a></li>
+     <!-- <li><a href="#"><%#= fa_icon "linkedin" %></a></li> -->
+    </ol>
+  </div>
