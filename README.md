@@ -1,12 +1,8 @@
-# This README has been modified, three times now
-
-> This application uses Ruby on Rails 5 to let users create porfolios
-
-### Features
-
-- Real-time chat engine for comments
-- Blog
-- Portfolio
-- Drag and drop interface
-
 # DevCampLive
+
+> This application is being deployed on Heroku, and still requires the following updates:
+
+- Portfolios added
+- Meaningful pictures added
+- More information in About
+- At least one blog, c'mon
